@@ -1,0 +1,32 @@
+{
+    // "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "linting.pylintEnabled": false,
+        "linting.flake8Enabled": true,
+        "linting.enabled": true,
+        "linting.lintOnSave": true,
+        "formatting.provider": "black",
+        "formatting.blackArgs": [
+            "--line-length",
+            "120"
+        ],
+        "linting.flake8Args": [
+            "--max-line-length=120",
+            "--ignore=E402",
+        ],
+        "pythonPath": "venv/bin/python",
+        "linting.pylintArgs": [
+            "--load-plugin=pylint_django"
+        ],
+    },
+    "cSpell.words": [
+        "pipreqs",
+        "venv"
+    ],
+}

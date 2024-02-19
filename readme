@@ -1,0 +1,129 @@
+# Stapes
+
+## 1. Create Virtual environment and activate it
+
+<!-- Virtual environment helps to separate packages at project laval.
+
+```cmd
+source venv/bin/activate
+python -m venv venv
+``` -->
+
+## 2. Install Pipenv
+
+it generates vertual envirment and requirements file based on imports in project.
+
+```cmd
+pip install pipenv
+```
+
+use this command to create requirements.txt.
+
+```cmd
+pipenv install Django==4.2
+OR
+pipenv install --dev autopep8 pep8 pylint pylint_django
+```
+
+To activate this project's virtualenv
+
+```cmd
+pipenv shell
+```
+
+OR
+
+```cmd
+pipenv run command
+```
+
+To deactivate this project's virtualenv
+
+```cmd
+exit
+```
+
+To install requirements from requirements.txt file
+
+```cmd
+pipenv install -r path/to/requirements.txt
+```
+
+To print requirements on terminal or promt
+
+```cmd
+pipenv requirements
+```
+
+To generate requirements.txt file
+
+```cmd
+pipenv requirements > requirements.txt
+or
+pipenv requirements --dev-only > dev-requirements.txt
+```
+
+## 3. Install Django
+
+Django is a high-level Python web framework.
+
+I prefer to use LTS versions for longtime support.
+
+```cmd
+pipenv install Django==4.2
+```
+
+## 4. Create Django project
+
+```cmd
+django-admin startproject projectname .
+```
+
+## 5. Migrate and run django server
+
+```cmd
+python manage.py migrate
+python manage.py runserver
+```
+
+OR
+
+```cmd
+./manage.py migrate
+./manage.py runserver
+```
+
+## 6. Create new app
+
+```cmd
+python manage.py startapp appname
+```
+
+OR
+
+```cmd
+./manage.py startapp appname
+```
+
+Register newly created app
+
+- Project Folder
+- settings.py file
+- INSTALLED_APPS
+- Add appname in end of the list
+
+After that add new migrations if any changes in model of new app
+
+```cmd
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
+
+OR
+
+```cmd
+./manage.py makemigrations
+./manage.py migrate
+./manage.py runserver
+```
